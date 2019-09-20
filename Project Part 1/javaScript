@@ -1,0 +1,26 @@
+var user=prompt("Do you want to DRIVE, RUN, or QUIT?").toUpperCase();
+
+switch (user)
+{
+case 'DRIVE':
+     var money=prompt("Do you have money to buy a car? YES or NO?").toUpperCase();
+     var moneyType=prompt(" Is it in bit coins? YES or NO?").toUpperCase();
+     if(money==="YES" && moneyType==="YES")
+        console.log("Great Let's get started");
+    else
+        console.log("Oops! too bad you don't have bit coins, better luck next time!");        
+        break;
+case 'RUN':
+    var strong=prompt("Are You strong enough to run? YES or NO?").toUpperCase();
+    var stamina=prompt("Do you have enough stamina to run at least 1 mile? YES or NO?").toUpperCase();
+    if(strong==="YES"||stamina==="YES")
+    console.log("great! lets hit the road then.");
+    else
+    console.log("too bad! you are not strong enough to run. may be you can try driving"); 
+        break;
+case 'QUIT':
+    console.log("bye now!");
+        break;
+default:
+        console.log("Sorry! i didn't understand you. please hit run again and this time enter DRIVE, RUN, or QUIT");
+}

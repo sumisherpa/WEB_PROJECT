@@ -1,0 +1,113 @@
+<!DOCTYPE HTML>
+<!--
+  Project Part II
+  Sumi Sherpa
+-->
+<html>
+  <head>
+    <title>Checkout</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <script language="javascript" src="cookiemanager.js"></script>
+    <script type="text/javascript" src="pricing.js"></script>
+    <script type="text/javascript">
+      if(getCookie("valid")!="true") location.href="login.html";
+      function cart()
+{
+  var total=0;
+  for(var i=0;i<items.length;i++)
+  {
+    qty=parseInt(getCookie(items[i]));
+    //alert(parseInt(qty));
+    if(!isNaN(qty))
+    {   
+      var itemqtyname=items[i]+"qty";
+      var cost=prices[i];
+      subtotal=prices[i]*qty;
+      total=total+subtotal;
+      document.writeln("<tr><td>",items[i],"</td><td>");
+      document.writeln("<input type='text' value='",qty,"' id='",itemqtyname,"' maxlength='2' size='2'/>");
+      document.writeln("<input type='button' value='update' id='",items[i],"' onclick='updateqty(this)';/>");
+      document.writeln("</td><td>");
+      document.writeln(cost);
+      document.writeln("</td><td>");
+      document.writeln(subtotal);
+      document.writeln("</td></tr>");
+    }
+   }
+   if(total !=0 ) 
+   {   
+  document.writeln("<tr><td colspan='3' >SUBTOTAL</td><td>");
+  document.writeln(total);
+  document.writeln("</td></tr>"); 
+   } 
+}
+
+function updateqty(item)
+{
+  var days=30;
+  itemid=item.id+"qty"
+  var newqty=parseInt(document.getElementById(itemid).value);
+  if (newqty==0) days=-1;
+  alert(newqty+":"+days);
+  setCookie(item.id,newqty,days);
+  location.reload();
+  location.href="cart.html";
+} 
+    </script>
+  </head>
+  <body class="is-preload">
+
+    <!-- Header -->
+      <header id="header">
+        <a class="logo" href="home.html">Omni Clothing</a>
+      </header>
+
+   
+
+    <!-- Banner -->
+        <section id="banner">
+        <div class="inner">
+          <h1>CART</h1>
+        </div>
+        <video autoplay loop muted playsinline src="images/Pattern_Background.mp4"></video>
+      </section>
+
+          <table>
+          <tr><td>NAME</td><td>QTY</td><td>COST</td><td>SUBTOTAL</td></tr>
+          <script type="text/javascript">
+          cart();
+          </script>
+          </table>
+<a href="products.html">Back to Shopping</a>&nbsp;<a href="checkout.html">Checkout</a>
+
+          <!-- Footer -->
+        <footer id="footer">
+        <div class="inner">
+          <div class="content">
+            <section>
+              <h4>Folow Us @</h4>
+              <a href="#"><i class="icon fa-twitter">&nbsp;</i>Twitter</a>
+              <a href="#"><i class="icon fa-facebook">&nbsp;</i>Facebook</a>
+              <a href="#"><i class="icon fa-instagram">&nbsp;</i>Instagram</a>
+              <a href="#"><i class="icon fa-github">&nbsp;</i>Github</a>
+            </section>
+          </div>
+          <div class="copyright">
+            &copy; Untitled. Photos <a href="https://unsplash.co">Unsplash</a>, Video <a href="https://coverr.co">Coverr</a>.
+          </div>
+        </div>
+      </footer>
+
+    <!-- Scripts -->
+      <script src="assets/js/jquery.min.js"></script>
+      <script src="assets/js/browser.min.js"></script>
+      <script src="assets/js/breakpoints.min.js"></script>
+      <script src="assets/js/util.js"></script>
+      <script src="assets/js/main.js"></script>
+
+  </body>
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE HTML>
+<!--
+  Project Part II
+  Sumi Sherpa
+-->
+<html>
+  <head>
+    <title>PRODUCTS</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <script type="text/javascript" src="cookiemanager.js"></script>
+    <script type="text/javascript">
+      function getselected(id)
+      {
+        var sel1=document.getElementById(id);
+        var index=sel1.selectedIndex;
+        var text=sel1.options[index].text;
+        alert(id +':'+ text);
+      }
+    </script>
+  </head>
+  <body class="is-preload">
+
+    <!-- Header -->
+      <header id="header">
+        <a class="logo" href="home.html">Omni Clothing</a>
+        <nav>
+          <a href="#menu">Menu</a>
+        </nav>
+      </header>
+
+    <!-- Nav -->
+      <nav id="menu">
+        <ul class="links">
+          <li><a href="home.html">Home</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="aboutus.html">About Us</a></li>
+          <li><a href="contactus.html">Contact Us</a></li>
+          <li><a href="login.html">Login</a></li>
+          <li><a href="registration.html">Register</a></li>
+          <li><a href="cart.html">Cart</a></li>
+        </ul>
+      </nav>
+
+    <!-- Banner -->
+        <section id="banner">
+        <div class="inner">
+          <h1>PRODUCTS</h1>
+        </div>
+        <video autoplay loop muted playsinline src="images/Pattern_Background.mp4"></video>
+      </section>
+      <!-- Search -->
+      <form method="post" action="#" id="search_form">
+          <p>
+            <input type="text" name="search_field" placeholder="Search...." />
+            <input name="search" type="image" style="border: 0; margin: 0 0 -9px 5px;" src="images/search.png" alt="Search" title="Search" />
+          </p>
+      <!--- RED DRESS details -->
+        <h2>&nbsp; Red Dress</h2>
+        <span class="center"><img src="images/red_dress.jpg" alt="ered_dress" /></span>
+        <p>
+          <b>&nbsp; Honey couture izzy designer sequin mini dress.<br>&nbsp; USD $102.99 <br>&nbsp; Available:5</b>
+        </p>
+        <form action="#" method="post">
+        <span>&nbsp; SIZE</span><select id="id" name="name"><option value="1">S</option>
+          <option value="2">M</option>
+          <option value="3">L</option>
+          <option value="4">XL</option>
+        </select>
+        <span>&nbsp; Quantity</span>
+        <select NAME='red_dress' id='red_dress'>
+          <OPTION VALUE='1' selected >1</option>
+          <OPTION VALUE='2'>2</option>
+          <OPTION VALUE='3'>3</option>
+          <OPTION VALUE='4'>4</option>
+          <OPTION VALUE='5'>5</option>
+        </select>
+        <p style="padding-top: 15px"><span>&nbsp;</span>
+          <input type="button" name="button" value="BUY" onclick="getselected('red_dress');" />
+          <a href="cart.html" onclick="setCookie('red_dress','1',1);">Add to Cart</a><br/></p>
+          
+        <table style="width:100%; border-spacing:0;color:#FF0080;">
+          <tr><th colspan="2">SPECIFICATIONS</th></tr>
+          <tr><td>Hemline/Train:</td><td>Short/Mini</td></tr>
+          <tr><td>Neckline:</td><td>Bateau</td></tr>
+          <tr><td>Fabric:</td><td>Shiffon</td></tr>
+          <tr><td>Built-In Bra:</td><td>Yes</td></tr>
+         </table>
+
+          <!-- Footer -->
+        <footer id="footer">
+        <div class="inner">
+          <div class="content">
+            <section>
+              <h4>Folow Us @</h4>
+              <a href="#"><i class="icon fa-twitter">&nbsp;</i>Twitter</a>
+              <a href="#"><i class="icon fa-facebook">&nbsp;</i>Facebook</a>
+              <a href="#"><i class="icon fa-instagram">&nbsp;</i>Instagram</a>
+              <a href="#"><i class="icon fa-github">&nbsp;</i>Github</a>
+            </section>
+          </div>
+          <div class="copyright">
+            &copy; Untitled. Photos <a href="https://unsplash.co">Unsplash</a>, Video <a href="https://coverr.co">Coverr</a>.
+          </div>
+        </div>
+      </footer>
+
+    <!-- Scripts -->
+      <script src="assets/js/jquery.min.js"></script>
+      <script src="assets/js/browser.min.js"></script>
+      <script src="assets/js/breakpoints.min.js"></script>
+      <script src="assets/js/util.js"></script>
+      <script src="assets/js/main.js"></script>
+
+  </body>
+</html>

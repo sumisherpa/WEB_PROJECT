@@ -1,0 +1,109 @@
+<!DOCTYPE HTML>
+<!--
+  Project Part II
+  Sumi Sherpa
+-->
+<html>
+  <head>
+    <title>Products</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <script language="javascript" src="cookiemngr.js"></script>
+    <script language="javascript" src="cookiemanager.js"></script>
+    <script type="text/javascript">
+
+      if(getCookie("valid")!="true") location.href="login.html";
+
+      function getselected(id)
+      {
+        var sel1=document.getElementById(id);
+        var index=sel1.selectedIndex;
+        var text=sel1.options[index].text;
+        alert(id +':'+ text);
+      }
+    </script>
+  </head>
+  <body class="is-preload">
+
+    <!-- Header -->
+      <header id="header">
+        <a class="logo" href="home.html">Omni Clothing</a>
+        <nav>
+          <a href="#menu">Menu</a>
+        </nav>
+      </header>
+
+    <!-- Nav -->
+      <nav id="menu">
+        <ul class="links">
+          <li><a href="home.html">Home</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="aboutus.html">About Us</a></li>
+          <li><a href="contactus.html">Contact Us</a></li>
+          <li><a href="login.html">Login</a></li>
+        </ul>
+      </nav>
+
+    <!-- Banner -->
+        <section id="banner">
+        <div class="inner">
+          <h1>PRODUCTS</h1>
+        </div>
+        <video autoplay loop muted playsinline src="images/Pattern_Background.mp4"></video>
+      </section>
+      <!-- Search -->
+      <form method="post" action="#" id="search_form">
+          <p>
+            <input type="text" name="search_field" placeholder="Search...." />
+            <input name="search" type="image" style="border: 0; margin: 0 0 -9px 5px;" src="images/search.png" alt="Search" title="Search" />
+          </p>
+        </form>
+
+         <!-- Highlights -->
+        <a href="item1.html"><img src="images/promdress.jpg" alt="prom_dress" width="300px"/></a>
+        <p><b>&nbsp; A-line Bateau Sleeveless Beading Short Chiffon Dress.</b></p>
+        <input type="button" value="addToCart" onclick="alert('promdess added to cart');setCookie('promdress',1,30);"/>
+        <BR/>
+        <a href="item2.html"><img src="images/red_dress.jpg" alt="red_dress" width="300px" /></a>
+        <p><b>&nbsp; Honey couture izzy designer sequin mini dress.</b> </p>
+        <input type="button" value="addToCart" onclick="alert('red_dress added to cart');setCookie('red_dress',1,30);" />
+        <BR/>
+        <a href="item3.html"><img src="images/longdress.jpg" alt="long_dress" width="300px" /></a>
+        <p><b>&nbsp; Ericdress V-Neck Belt Ankle-Length Print Maxi Dress.</b> </p>
+        <input type="button" value="addToCart" onclick="alert('longdress added to cart');setCookie('longdress',1,30);" />
+        <BR/>
+        <a href="cart.html">View Cart</a>
+    <!-- Highlights -->
+      
+  
+  </div>  
+    <!-- Footer -->
+      <footer id="footer">
+        <div class="inner">
+          <div class="content">
+            <section>
+              <h4>Folow Us @</h4>
+              <a href="#"><i class="icon fa-twitter">&nbsp;</i>Twitter</a>
+              <a href="#"><i class="icon fa-facebook">&nbsp;</i>Facebook</a>
+              <a href="#"><i class="icon fa-instagram">&nbsp;</i>Instagram</a>
+              <a href="#"><i class="icon fa-github">&nbsp;</i>Github</a>
+            </section>
+          </div>
+          <div class="copyright">
+            &copy; Untitled. Photos <a href="https://unsplash.co">Unsplash</a>, Video <a href="https://coverr.co">Coverr</a>.
+          </div>
+        </div>
+      </footer>
+
+    <!-- Scripts -->
+      <script src="assets/js/jquery.min.js"></script>
+      <script src="assets/js/browser.min.js"></script>
+      <script src="assets/js/breakpoints.min.js"></script>
+      <script src="assets/js/util.js"></script>
+      <script src="assets/js/main.js"></script>
+
+  </body>
+</html>

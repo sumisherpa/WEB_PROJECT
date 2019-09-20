@@ -1,0 +1,103 @@
+<!DOCTYPE HTML>
+<!--
+  Project Part II
+  Sumi Sherpa
+-->
+<html>
+  <head>
+    <title>Registration</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <script type="text/javascript" src="cookiemanager.js"></script>
+    <script type="text/javascript">
+      function registration ()
+      {
+        var username=document.getElementById('username');
+        var password=document.getElementById('password');
+        var value=username.value+":"+password.value;
+        setCookie("login",value,1);
+        alert(document.cookie);
+      }
+    </script>
+  </head>
+  <body class="is-preload">
+
+    <!-- Header -->
+      <header id="header">
+        <a class="logo" href="home.html">Omni Clothing</a>
+        <nav>
+          <a href="#menu">Menu</a>
+        </nav>
+      </header>
+
+    <!-- Nav -->
+      <nav id="menu">
+        <ul class="links">
+          <li><a href="home.html">Home</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="aboutus.html">About Us</a></li>
+          <li><a href="contactus.html">Contact Us</a></li>
+          <li><a href="login.html">Login</a></li>
+          <li><a href="registration.html">Register</a></li>
+          <li><a href="cart.html">Cart</a></li>
+
+        </ul>
+      </nav>
+
+    <!-- Banner -->
+        <section id="banner">
+        <div class="inner">
+          <h1>REGISTRATION</h1>
+        </div>
+        <video autoplay loop muted playsinline src="images/Pattern_Background.mp4"></video>
+      </section>
+      <!-- Search -->
+      <form method="post" action="#" id="search_form">
+          <p>
+            <input type="text" name="search_field" placeholder="Search...." />
+            <input name="search" type="image" style="border: 0; margin: 0 0 -9px 5px;" src="images/search.png" alt="Search" title="Search" />
+          </p>
+          <!--Registration form --> 
+      
+        <h3 style="width:100%; border-spacing:0;color:#FF0080;">&nbsp; If you do not have an account with us, you can register here:</h3>
+        <form action="#" method="post">
+          <p><span>&nbsp; Username:</span><input type="text" id="username" value="" /></p>
+          <p><span>&nbsp; Password:</span><input type="password" id="password" value="" /></p>
+          <p><span>&nbsp; Re-Type Password:</span><input type="password" id="password2" value="" /></p>
+          <p><span>&nbsp; FirstName:</span><input type="text" id="first" value="" /></p>
+          <p><span>&nbsp; LastName:</span><input type="text" id="last" value="" /></p>
+          <p><span>&nbsp; Secret:</span><input type="text" id="sercret" value="" /></p>
+            <p style="padding-top: 15px"><span>&nbsp;</span><input class="submit" type="button" name="contact_submitted" value="Create" onclick="registration(); location.href='login.html';" /><input type="reset" value="Clear"></p>
+        </form>
+
+
+          <!-- Footer -->
+        <footer id="footer">
+        <div class="inner">
+          <div class="content">
+            <section>
+              <h4>Folow Us @</h4>
+              <a href="#"><i class="icon fa-twitter">&nbsp;</i>Twitter</a>
+              <a href="#"><i class="icon fa-facebook">&nbsp;</i>Facebook</a>
+              <a href="#"><i class="icon fa-instagram">&nbsp;</i>Instagram</a>
+              <a href="#"><i class="icon fa-github">&nbsp;</i>Github</a>
+            </section>
+          </div>
+          <div class="copyright">
+            &copy; Untitled. Photos <a href="https://unsplash.co">Unsplash</a>, Video <a href="https://coverr.co">Coverr</a>.
+          </div>
+        </div>
+      </footer>
+
+    <!-- Scripts -->
+      <script src="assets/js/jquery.min.js"></script>
+      <script src="assets/js/browser.min.js"></script>
+      <script src="assets/js/breakpoints.min.js"></script>
+      <script src="assets/js/util.js"></script>
+      <script src="assets/js/main.js"></script>
+
+  </body>
+</html>
